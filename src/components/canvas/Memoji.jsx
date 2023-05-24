@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF, useAnimations } from "@react-three/dre
 
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+const Memoji = ({ isMobile }) => {
   const group = useRef()
   const { scene, animations } = useGLTF("./memoji_typing.glb");
   const { actions } = useAnimations(animations, group);
@@ -39,7 +39,7 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-const ComputersCanvas = () => {
+const MemojiCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -81,7 +81,7 @@ const ComputersCanvas = () => {
           maxAzimuthAngle={Math.PI / 4}
           reverseOrbit
         />
-        <Computers isMobile={isMobile} />
+        <Memoji isMobile={isMobile} />
       </Suspense>
 
       <Preload all />
@@ -91,4 +91,4 @@ const ComputersCanvas = () => {
 
 useGLTF.preload("./memoji_typing.glb");
 
-export default ComputersCanvas;
+export default MemojiCanvas;
