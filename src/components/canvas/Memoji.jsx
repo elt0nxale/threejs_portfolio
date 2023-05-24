@@ -69,6 +69,7 @@ const MemojiCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      dispose={null}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
@@ -81,7 +82,7 @@ const MemojiCanvas = () => {
           maxAzimuthAngle={Math.PI / 4}
           reverseOrbit
         />
-        <Memoji isMobile={isMobile} />
+        <Memoji isMobile={isMobile}  />
       </Suspense>
 
       <Preload all />

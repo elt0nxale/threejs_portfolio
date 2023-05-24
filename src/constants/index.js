@@ -77,28 +77,12 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Vue JS",
-    icon: docker,
-  },
-  {
     name: "Redux Toolkit",
     icon: redux,
   },
   {
-    name: "MobX",
-    icon: docker,
-  },
-  {
     name: "Tailwind CSS",
     icon: tailwind,
-  },
-  {
-    name: "MySQL",
-    icon: docker,
-  },
-  {
-    name: "Firebase",
-    icon: docker,
   },
   {
     name: "MongoDB",
@@ -130,23 +114,20 @@ const experiences = [
     iconBg: "#383E56",
     date: "May '23 - Aug '23",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed new web platform used in production from existing IOS version using React.js, TailwindCSS, MobX, MongoDB and AWS",
     ],
   },
   {
     title: "Data Analyst Intern",
     company_name: "Shopee",
     icon: tesla,
-    iconBg: "#E6DEDD",
+    iconBg: "#383E56",
     date: "Sep '22 - Dec '22",
     points: [
       "Utilized PySpark and PrestoSQL for off-platform data querying to support regional business intelligence teams",
       "Integrated gsheet apis to automate periodic statistical reporting with Apache Airflow and Data Studio",
       "Built internal dashboards & download boards to provide BI teams with self-customizable reports",
-      "Optimized python and sql workflow scripts to reduce expenditure on Google Analytics by 15%",
+      "Optimized workflow scripts to reduce expenditure on Google Analytics",
     ],
   },
   {
@@ -156,7 +137,6 @@ const experiences = [
     iconBg: "#383E56",
     date: "May '22 - Aug '22",
     points: [
-      "Assisted in overseeing web projects from wireframing to site migration across diverse industries",
       "Built industry-standard ui/ux prototypes using figma to ensure quality user experience",
       "Deployed timely code fixes to production and refactored code for reusability and efficiency",
       "Participated in code reviews and providing constructive feedback to other developers",
