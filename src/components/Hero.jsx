@@ -22,7 +22,7 @@ const Hero = () => {
             Hi, I'm <span className='text-quarterary d-inline'>
               <Typewriter
                 options={{
-                  pauseFor:'2000',
+                  pauseFor:'10000',
                   strings: ["Elton "],
                   autoStart: true,
                   loop: true,

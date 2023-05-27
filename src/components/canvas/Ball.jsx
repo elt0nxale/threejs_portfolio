@@ -9,6 +9,7 @@ import {
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import { MeshBasicMaterial } from "three";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -18,9 +19,9 @@ const Ball = (props) => {
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
       <mesh castShadow receiveShadow scale={2.75}>
-        <sphereGeometry args={[1, 16, 16]} />
+        <dodecahedronGeometry args={[1, 2, 3]} />
         <meshStandardMaterial
-          color='#fff8eb'
+          color='#DCD7C9'
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
@@ -28,7 +29,7 @@ const Ball = (props) => {
         <Decal
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
-          scale={1}
+          scale={0.9}
           map={decal}
           flatShading
         />

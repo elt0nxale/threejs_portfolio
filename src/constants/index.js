@@ -19,10 +19,17 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
+  sgxchange,
   jobit,
   tripguide,
   threejs,
+  vue,
+  java,
+  spring,
+  flask,
+  rabbitmq,
+  python,
+  php,
 } from "../assets";
 
 export const navLinks = [
@@ -77,8 +84,12 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Vue JS",
+    icon: vue,
+  },
+  {
+    name: "Java",
+    icon: java,
   },
   {
     name: "Tailwind CSS",
@@ -93,16 +104,16 @@ const technologies = [
     icon: threejs,
   },
   {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
     name: "docker",
     icon: docker,
+  },
+  {
+    name: "rabbitmq",
+    icon: rabbitmq,
+  },
+  {
+    name: "python",
+    icon: python,
   },
 ];
 
@@ -112,7 +123,7 @@ const experiences = [
     company_name: "Truffle Technologies",
     icon: shopify,
     iconBg: "#383E56",
-    date: "May '23 - Aug '23",
+    date: "May ' 23 - Aug ' 23",
     points: [
       "Developed new web platform used in production from existing IOS version using React.js, TailwindCSS, MobX, MongoDB and AWS",
     ],
@@ -122,7 +133,7 @@ const experiences = [
     company_name: "Shopee",
     icon: tesla,
     iconBg: "#383E56",
-    date: "Sep '22 - Dec '22",
+    date: "Sep ' 22 - Dec ' 22",
     points: [
       "Utilized PySpark and PrestoSQL for off-platform data querying to support regional business intelligence teams",
       "Integrated gsheet apis to automate periodic statistical reporting with Apache Airflow and Data Studio",
@@ -135,7 +146,7 @@ const experiences = [
     company_name: "Superminted Co",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "May '22 - Aug '22",
+    date: "May ' 22 - Aug ' 22",
     points: [
       "Built industry-standard ui/ux prototypes using figma to ensure quality user experience",
       "Deployed timely code fixes to production and refactored code for reusability and efficiency",
@@ -157,9 +168,92 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Portfolio Site",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "3D portfolio site to showcase my portfolio. Features animated 3D models using Threejs and react-three-fiber, contact section built with emailjs and styled with tailwind. Credits to @adrianhajdin for the inspiration.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "threejs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: sgxchange,
+    demo_link: "https://sgxchange-smu.vercel.app/",
+    source_code_link: "https://github.com/elt0nxale/sgxchange",
+  },
+  {
+    name: "SGXchange",
+    description:
+      "Web-based platform that allows users to search, plan, and map university modules from universities around the world specific to their degree. Features a module mapping tool configured using web-scraped backend data, built by a team of 4.",
+    tags: [
+      {
+        name: "vue",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: sgxchange,
+    demo_link: "https://sgxchange-smu.vercel.app/",
+    source_code_link: "https://github.com/elt0nxale/sgxchange",
+  },
+  {
+    name: "Go Book",
+    description:
+      "Class booking app with user account system to facilitate the browsing, reviewing and booking of courses. Features kafka recommendation engine, qr ticket generator, integrated stripe payment api and designed with microservice architecture",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "flask",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "docker",
+        color: "dark-blue-text-gradient",
+      },
+      {
+        name: "rabbitMQ",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "springboot",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: jobit,
+    demo_link: "#",
+    source_code_link: "https://github.com/TeoSean00/GoBook-Frontend",
+    // https://github.com/JosephJL/Gobook-Backend
+  },
+  {
+    name: "Form Management System",
+    description:
+      "A authentication-based form management system for users to create, approve, fill and track forms based on an existing business workflow. Features an interactive form builder, customizable dashboard, form pdf exporter and form audit trail. Built by team of 6 for an academic client-based project",
     tags: [
       {
         name: "react",
@@ -170,54 +264,17 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "materialui",
         color: "pink-text-gradient",
       },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "springboot",
+        color: "purple-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/",
+    demo_link: "#",
+    source_code_link: "https://github.com/BryanTJJ99/OOP_FormApp",
   },
 ];
 
