@@ -251,9 +251,9 @@ const projects = [
     // https://github.com/JosephJL/Gobook-Backend
   },
   {
-    name: "Form Management System",
+    name: "Form Management App",
     description:
-      "A authentication-based form management system for users to create, approve, fill and track forms based on an existing business workflow. Features an interactive form builder, customizable dashboard, form pdf exporter and form audit trail. Built by team of 6 for an academic client-based project",
+      "Auth-based form management system for users to create, approve, fill and track forms based on an existing business workflow. Features an interactive form builder, customizable dashboard, pdf exporter and audit trail. Built by team of 6 for an academic client-based project",
     tags: [
       {
         name: "react",
