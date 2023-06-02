@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Typewriter from 'typewriter-effect'
 import { styles } from "../styles";
 import { MemojiCanvas } from "./canvas";
+import Message from "./Message"
 
 const Hero = () => {
   return (
@@ -33,12 +34,12 @@ const Hero = () => {
             I love building satisfying user<br className='sm:block hidden' />
               interfaces and web apps.
           </p>
-          <p className="px-4 mt-3 text-gray-400">try dragging me with left and right click --> </p>
-          
+          <Message />
         </div>
       </div>
 
       <MemojiCanvas />
+  
                 
       <div className='absolute xs:bottom-16 bottom-38 w-full flex justify-center items-center'>
         <a href='#about'>

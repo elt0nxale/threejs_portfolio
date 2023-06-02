@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { menu, close } from "../assets";
-import logocolor from "../assets/logocolor.svg"
+import logocolor from "../assets/mylogo2.png"
 
-const Navbar = () => {
-  const [active, setActive] = useState("");
+const Navbar = ({isActive}) => {
+  const [active, setActive] = useState({isActive});
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -43,10 +43,9 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logocolor} alt='logo' className='w-9 h-9 object-contain mx-1' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex'>
-            Elton &nbsp;
-            <span className='sm:block hidden'>| &nbsp;Portfolio Site</span>
+          <img src={logocolor} alt='logo' className='w-10 h-10 object-contain mx-1 pt-1' />
+          <p className='text-[18px] font-bold cursor-pointer flex text-secondary'>
+            <span className="tracking-wider font-poppins">Portfolio</span>
           </p>
         </Link>
 

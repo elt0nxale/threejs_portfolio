@@ -48,7 +48,7 @@ const ProjectCard = ({
                 className='w-1/2 h-1/2 object-contain hover:scale-110 transition-all cursor-default'
               />
             </div>
-            <div class="tooltip absolute z-10 top-[40px] right-[-5px] inline-block px-2 py-1 text-[9px] font-medium text-white transition-opacity transition-300 delay-500 rounded-lg shadow-sm bg-zinc-700 invisible opacity-0">
+            <div className="tooltip absolute z-10 top-[40px] right-[-5px] inline-block px-2 py-1 text-[9px] font-medium text-white transition-opacity transition-300 delay-500 rounded-lg shadow-sm bg-zinc-700 invisible opacity-0">
               Source code
             </div>
           </div>
@@ -59,11 +59,11 @@ const ProjectCard = ({
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
+        <div className='mt-4 flex flex-wrap gap-2 h-[45px] align-bottom flex-row'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[14px] ${tag.color} mt-auto`}
             >
               #{tag.name}
             </p>
@@ -74,10 +74,10 @@ const ProjectCard = ({
   );
 };
 
-const Works = () => {
+const Works = ({innerRef}) => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} ref={innerRef}>
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
@@ -104,4 +104,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");

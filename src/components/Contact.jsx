@@ -6,8 +6,9 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { i } from "maath/dist/index-43782085.esm";
 
-const Contact = () => {
+const Contact = ({innerRef}) => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -68,6 +69,7 @@ const Contact = () => {
   return (
     <div
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+      ref={innerRef}
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}

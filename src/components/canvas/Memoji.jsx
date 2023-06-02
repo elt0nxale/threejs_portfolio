@@ -1,19 +1,29 @@
 import React, { Suspense, useEffect, useState, useRef} from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF, useAnimations } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, Preload, useGLTF, useAnimations,  } from "@react-three/drei";
+import * as THREE from 'three'
 
 import CanvasLoader from "../Loader";
 
 const Memoji = ({ isMobile }) => {
   const group = useRef()
   const { scene, animations } = useGLTF("./memoji_typing.glb");
-  const { actions } = useAnimations(animations, group);
-  const action = actions['mixamo.com'];
+  // const { actions } = useAnimations(animations, group);
+  // const action = actions['mixamo.com'];
+  // // action?.play();
 
-  useEffect(() => {
-    action?.play()
-    action?.setLoop(2);
-  },[action]);
+  // useEffect(() => {
+  //   action?.play()
+  // });
+
+  let mixer = new THREE.AnimationMixer(scene);
+  animations.forEach((clip) => {
+      const action = mixer.clipAction(clip);
+      action.play();
+  });
+  useFrame((state, delta) => {
+      mixer.update(delta);
+  });
 
   return (
     <mesh>

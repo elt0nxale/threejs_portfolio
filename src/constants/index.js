@@ -16,12 +16,14 @@ import {
   figma,
   docker,
   meta,
-  starbucks,
-  tesla,
-  shopify,
+  spmt,
+  shopee,
+  truffle,
   sgxchange,
+  gobook,
+  portfolio,
   jobit,
-  tripguide,
+  formapp,
   threejs,
   vue,
   java,
@@ -37,9 +39,13 @@ export const navLinks = [
     id: "about",
     title: "About",
   },
-  {
+   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -53,12 +59,16 @@ const services = [
     icon: web,
   },
   {
+    title: "UI/UX",
+    icon: creator,
+  },
+  {
     title: "Data Analyst",
     icon: backend,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Student",
+    icon: mobile,
   },
 ];
 
@@ -121,8 +131,8 @@ const experiences = [
   {
     title: "Software Developer Intern",
     company_name: "Truffle Technologies",
-    icon: shopify,
-    iconBg: "#383E56",
+    icon: truffle,
+    iconBg: "#fff",
     date: "May ' 23 - Aug ' 23",
     points: [
       "Developed new web platform used in production from existing IOS version using React.js, TailwindCSS, MobX, MongoDB and AWS",
@@ -131,8 +141,8 @@ const experiences = [
   {
     title: "Data Analyst Intern",
     company_name: "Shopee",
-    icon: tesla,
-    iconBg: "#383E56",
+    icon: shopee,
+    iconBg: "#fff",
     date: "Sep ' 22 - Dec ' 22",
     points: [
       "Utilized PySpark and PrestoSQL for off-platform data querying to support regional business intelligence teams",
@@ -144,8 +154,8 @@ const experiences = [
   {
     title: "Web Development Intern",
     company_name: "Superminted Co",
-    icon: starbucks,
-    iconBg: "#383E56",
+    icon: spmt,
+    iconBg: "#fff",
     date: "May ' 22 - Aug ' 22",
     points: [
       "Built industry-standard ui/ux prototypes using figma to ensure quality user experience",
@@ -170,7 +180,7 @@ const projects = [
   {
     name: "Portfolio Site",
     description:
-      "3D portfolio site to showcase my portfolio. Features animated 3D models using Threejs and react-three-fiber, contact section built with emailjs and styled with tailwind. Credits to @adrianhajdin for the inspiration.",
+      "3D portfolio site to showcase my works. Features animated 3D models using Threejs and react-three-fiber, contact section built with emailjs and styled with tailwind. Credits to @adrianhajdin for the inspiration.",
     tags: [
       {
         name: "react",
@@ -185,9 +195,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: sgxchange,
-    demo_link: "https://sgxchange-smu.vercel.app/",
-    source_code_link: "https://github.com/elt0nxale/sgxchange",
+    image: portfolio,
+    demo_link: "https://elt0nxale.vercel.app/",
+    source_code_link: "https://github.com/elt0nxale/threejs_portfolio",
   },
   {
     name: "SGXchange",
@@ -245,10 +255,9 @@ const projects = [
         color: "purple-text-gradient",
       },
     ],
-    image: jobit,
-    demo_link: "#",
-    source_code_link: "https://github.com/TeoSean00/GoBook-Frontend",
-    // https://github.com/JosephJL/Gobook-Backend
+    image: gobook,
+    demo_link: "https://go-book-frontend.vercel.app/",
+    source_code_link: "https://github.com/elt0nxale/GoBook-backend",
   },
   {
     name: "Form Management App",
@@ -272,7 +281,7 @@ const projects = [
         color: "purple-text-gradient",
       },
     ],
-    image: tripguide,
+    image: formapp,
     demo_link: "#",
     source_code_link: "https://github.com/BryanTJJ99/OOP_FormApp",
   },

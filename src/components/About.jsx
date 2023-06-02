@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef, useEffect, useRef } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
@@ -36,28 +36,33 @@ const ServiceCard = ({ index, title, icon }) => (
   </Tilt>
 );
 
-const About = () => {
+
+const About = forwardRef(function About(props, ref) {
+  // useEffect(() => {
+  //   console.log('about ref from inside child')
+  //   console.log(innerRef.current)
+  // }, [innerRef])
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
+    <div ref={ref}>
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>Introduction</p>
+          <h2 className={styles.sectionHeadText}>Overview.</h2>
+        </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I'm currently a sophomore majoring in Information Systems at SMU, with a passion for building. I'm experienced with TypeScript, JavaScript, Python, PHP and Java and frameworks like React, Vue, Three.js, SpringBoot and Flask. Let's work together to develop efficient solutions to solve problems in the real world
-      </motion.p>
+        <motion.p
+          variants={fadeIn("", "", 0.1, 1)}
+          className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        >
+          I'm currently a sophomore majoring in Information Systems at SMU, with a passion for building. I'm experienced with TypeScript, JavaScript, Python, PHP and Java and frameworks like React, Vue, Three.js, SpringBoot and Flask. Let's work together to develop efficient solutions to solve problems in the real world
+        </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
-      </div>
-    </>
+        <div className='mt-20 flex flex-wrap gap-10'>
+          {services.map((service, index) => (
+            <ServiceCard key={service.title} index={index} {...service} />
+          ))}
+        </div>
+    </div>
   );
-};
+});
 
 export default SectionWrapper(About, "about");

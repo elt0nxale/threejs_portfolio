@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -28,19 +27,18 @@ import rabbitmq from "./tech/rabbitmq.png"
 import spring from "./tech/spring.png"
 import php from "./tech/php.png"
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import truffle from "./company/truffle-logo.png"
+import shopee from "./company/shopee.png"
+import spmt from "./company/superminted.png"
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+
 import sgxchange from "./sgxchange.gif";
+import portfolio from "./portfolio.gif";
+import gobook from "./gobook.gif"
+import formapp from "./formapp.gif"
 
 
 export {
-  logo,
   backend,
   creator,
   mobile,
@@ -61,14 +59,8 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
   sgxchange,
+  portfolio,
   vue,
   java,
   flask,
@@ -76,4 +68,9 @@ export {
   spring,
   python,
   php,
+  truffle,
+  shopee,
+  spmt,
+  gobook,
+  formapp,
 };
