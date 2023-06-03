@@ -3,8 +3,12 @@ import Typewriter from 'typewriter-effect'
 import { styles } from "../styles";
 import { MemojiCanvas } from "./canvas";
 import Message from "./Message"
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+
+  const [memojiLoaded, setMemojiLoaded] = useState(false)
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -34,32 +38,20 @@ const Hero = () => {
             I love building satisfying user<br className='sm:block hidden' />
               interfaces and web apps.
           </p>
-          <Message />
+          { memojiLoaded && <Message />}
         </div>
       </div>
 
-      <MemojiCanvas />
+      <MemojiCanvas setMemojiLoaded={setMemojiLoaded} />
   
                 
-      <div className='absolute xs:bottom-16 bottom-38 w-full flex justify-center items-center'>
+      <div className='absolute xs:bottom-8 bottom-26 w-full flex justify-center items-center'>
         <a href='#about'>
-          <motion.div 
-            
-            animate={{
-              y: [0, 24, 0],
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-          >
+          <div className='animate-bounce'>
             <div className='w-[30px] h-[52px] rounded-3xl border-4 border-quarterary flex justify-center items-start p-2'>
               <div className='w-1 h-2 rounded-lg bg-quarterary'/>
             </div>
-            {/* arrow */}
-            {/* <div className="absolute xs:bottom-[-25px] right-[9.25px] w-3 h-3 border-x-8 border-x-transparent border-b-8 border-b-[#DCD7C9] rotate-180"/> */}
-          </motion.div>
+          </div>
         </a>
       </div>
     </section>
